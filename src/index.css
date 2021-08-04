@@ -517,6 +517,7 @@ h2.tittle_common{
   font-size: 17px;
   color: #928c8c;
   margin-top: 10px;
+  font-weight: 600;
 }
 .newsletter .input-group-btn .btn {
   background: #345f90;
@@ -621,4 +622,249 @@ p.lst_txt {
 }
 .gap_extra label i.fa,.calender label i.fa,.traveller_input i.fa{
   margin-right: 5px;
+}
+
+@media  (max-width: 992px) {
+  .border-gap{
+    border-right: 1px solid #ccc !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .border-left1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .inner_shadow.parent .read_more{
+    margin-top: 15px;
+  }
+  .sign_up .main_div .name_client{
+    top: auto;
+  }
+  .holiday.top_flights{
+    margin-top: 0px;
+  }
+}
+
+@media  (max-width: 767px) {
+  .main-form ul{
+    margin-bottom: 30px;
+  }
+  .main_form .form-control{
+    font-size: 15px;
+  }
+  .main_form .form-group label{
+    padding: 0 5px;
+  }
+  .holiday .form-group {
+    margin-bottom: 15px;
+}
+.container{
+  max-width: 100%;
+}
+.tracker-right h1{
+  font-size: 22px !important;
+}
+.tracker-home .tracker-right h2{
+  font-size: 18px !important;
+}
+.banner.home h2{
+  font-size: 25px;
+}
+.popular_place h2{
+  font-size: 20px;
+}
+}
+@media  (max-width: 599px) {
+    .tracker-right{
+      margin-top: 20px;
+    }
+    .newsletter .input-group-btn .btn{
+      font-size: 15px;
+    }
+    .newsletter .form-control{
+      height: auto;
+    }
+    .newsletter .input-group-btn .btn{
+      padding: 10px 18px;
+      font-weight: normal;
+    }
+}
+
+/***************************************/
+.flight-dv a{
+  font-weight: 600;
+  color: #15577c !important;
+}
+.route-section ul {
+  list-style: none;
+  padding: 0px;
+}
+.route-section ul li a i.fa {
+  color: #de552b;
+  margin-right: 10px;
+}
+.route-section ul li{
+  margin-bottom: 10px;
+}
+.flight-tick li{
+  color: #808080;
+  font-weight: 500;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.flight-tick{
+  padding: 0px;
+  list-style: none;
+}
+.flight-tick li i.fa{
+  color: #de552b;
+  margin-right: 10px;
+  position: absolute;
+  left: -8px;
+  top: 2px;
+}
+.airline-inner img{
+  margin: 20px auto 8px;
+  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
+}
+.airline-inner {
+  text-align: center;
+}
+.airline-inner p{
+  margin-bottom: 0px;
+}
+.martb15{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mb15{
+  margin-bottom:15px ;
+}
+.mt15{
+  margin-top:15px ;
+}
+.question-dv h3{
+  font-weight: 600;
+  color: #15577c;
+  font-size: 20px;
+}
+.question-dv p{
+  color: #595959;
+  font-weight: 500;
+  font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 150%;
+  margin-bottom: 18px;
+}
+.deal-dv .thumb{
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.deal-dv b {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 0;
+  color: #fff;
+  padding: 6px 0;
+}
+.deal-tabs ul li.nav-item a{
+  border: none;
+  border-bottom: 3px solid #f3f3f3;
+}
+.deal-tabs ul li.nav-item a:hover{
+  border-bottom:4px solid #345F90;
+  color: #de552b !important;
+  background-color: #eee;
+}
+
+.deal-tabs .nav-tabs li a.active.nav-link{
+  text-transform: none;
+}
+.deal-content {
+  padding: 5px 40px;
+  text-align: center;
+}
+.tracker-right h1{
+  font-weight: 600;
+  color: #15577c;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+.tracker-home .tracker-right h2{
+  font-size: 25px;
+  margin-bottom: 22px;
+  font-weight: 600;
+  color: #15577c;
+  text-shadow: none;
+  text-align: left;
+}
+.tracker-left {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.tracker-home .tracker-left a.active{
+  background-color: #337ab7 !important;
+  color: #fff !important;
+  border-bottom: none !important;
+  text-transform: none !important;
+  border-radius: 4px !important;
+ 
+}
+.tracker-home .tracker-left a{
+  border: none !important;
+  background: #f3f3f3;
+}
+.tracker-home .tracker-left a:hover{
+  color: #de552b;
+}
+.panel-body label {
+  display: block;
+  font-weight: 700;
+} 
+.panel-body input{
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.normal-button{
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  background-image: linear-gradient( 
+179deg
+, rgba(252,115,70,1) 29%, rgba(251,81,28,1) 59%);
+width: 100%;
+border: none;
+padding: 10px 16px;
+}
+ul.arrival-dv li b {
+  color: #808080;
+}
+ul.arrival-dv li i{
+  color: #de552b;
+  margin-right: 5px;
+}
+ul.arrival-dv.status-dv {
+  list-style: none;
+  padding: 0;
+}
+ul.arrival-dv.status-dv i{
+  margin-right: 10px;
+}
+header.header1 .right-section .pull-right h3 {
+  margin-bottom: 0;
+  color: #de552b;
+  font-size: 21px;
+  font-weight: 700;
+}
+ul.arrival-dv.status-dv li {
+  margin-bottom: 10px;
 }

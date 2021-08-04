@@ -459,10 +459,188 @@ function App() {
     <div className="flight-dv">
        <div className="container">
            <h2 className="tittle_common">
-           Easy Flight Options, Easier Flight Bookings
+           Enjoy Cheap Flight Ticket Bookings Online
            </h2>
-           <p>Have you ever wondered what the key aspect of planning a trip is? Flight booking it is! Whether you plan to travel domestically or internationally, for business or leisure, you’ll need a platform to help you with affordable flight tickets. If you’ve been looking for one such platform, your search ends here! Travanya is the best travel agency in India that specializes in offering personalized holiday planning and booking of cheap flight tickets. </p>
-           <p>With us, you can be assured of getting flight tickets at the lowest prices. Be it a place in Bhutan, USA, or India, our travel experts will make sure you have the best flight itinerary. Get in touch with us via call or live chat and we’ll be glad to offer a helping hand. </p>
+           <p>Life is too short to stay at home. Planning your trip to your dream destination is an ideal thing to do. Book your air tickets to experience new cultures, meet new people and explore the beauty of nature. With a plethora of online flight booking options available today. You can compare ticket prices from several airlines, book the best for yourself and wander through the places where you always wanted to go. </p>
+           <p>Travelling is about letting go and living in the moment. With a hassle-free flight booking experience, Travanya will help you discover beautiful corners and people of the world. We assure you of easy accessibility to browse the most suitable flight options according to your needs and preferences. Now, forget your anxieties and dare to embark on new challenges to live in harmony with nature and culture. With <a>cheap flight tickets</a>, push yourself beyond your comfort zone.</p>
+       </div>
+    </div>
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           Domestic Air Ticket Bookings
+           </h2>
+           <p>India has 103 domestic airports with the busiest airport in Delhi, Indira Gandhi International Airport. Delhi being the epicentre of the country handles more than 200 domestic flights each day. The route from Delhi to Mumbai and Mumbai to Goa is the most popular and preferred by Indian travellers </p>
+           <p>A large number of searches are also found for <a>flights to DEL</a> from JAI, Lucknow, Andaman, Chandigarh, Cochin and Hyderabad. The top airlines that serve domestic flights are <a>IndiGo</a>, Air India, Go Air, <a>AirAsia</a> India and Vistara. </p>
+       </div>
+    </div>
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           Top Domestic Routes For Direct Flights
+           </h2>
+           <div className="route-section">
+               <div className="row">
+               <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Delhi to Mumbai (DEL to BOM)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Mumbai to Delhi (BOM to DEL)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Mumbai to Goa (BOM to GOI)</a></li>
+                    </ul>
+                </div>
+                <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Delhi to Goa (DEL to GOI)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Kolkata to Delhi (CCU to DEL)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Mumbai to Bangalore (BOM to BLR)</a></li>
+                    </ul>
+                </div>
+                <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Pune to Delhi (PNQ to DEL)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Kolkata to Chennai (CCU to MAA)</a></li>
+                      <li><a><i className="fa fa-plane"></i>Chennai to Pune (MAA to PNQ)</a></li>
+                    </ul>
+                </div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           Domestic Plane Ticket Airfares
+           </h2>
+           <p>The air ticket prices to travel in India depends on airlines and route connectivity. However, an average economy class flight from DEL to BOM starts from INR 2596 and an average airfare from BOM to GOI starts from INR 2431. </p>
+       </div>
+     
+    </div>
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           International Airline Ticket Bookings
+           </h2>
+           <p>India has 34 international airports with more than 90 flights flying per day to other countries. <a>Indira Gandhi International Airport (DEL)</a>, Chhatrapati Shivaji Maharaj International Airport (BOM) and Chennai International Airport (MAA) handle the most <a>international flights. </a></p>
+            <p>You may also find flights from Delhi, Mumbai and <a>Chennai to Melbourne</a>, Mauritius, Maldives, Auckland, Bali, Tokyo, Beijing and more than 90 other international cities. </p>
+            <p>Major airlines serving international flights from India are Scoot Airlines, <a>United Airlines</a>, Delta Airlines, <a>Air India</a> and Air Canada.</p>
+       </div>
+    </div>
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           Top International Routes For Direct Flights
+           </h2>
+           <div className="route-section">
+               <div className="row">
+               <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Flights to Canada</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Australia</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Thailand</a></li>
+                    </ul>
+                </div>
+                <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Flights to USA</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Singapore</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Switzerland</a></li>
+                    </ul>
+                </div>
+                <div className="col-sm-4">
+                    <ul>
+                      <li><a><i className="fa fa-plane"></i>Flights to UK</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Hong Kong</a></li>
+                      <li><a><i className="fa fa-plane"></i>Flights to Maldives</a></li>
+                    </ul>
+                </div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div className="flight-dv mb15">
+       <div className="container">
+           <h2 className="tittle_common">
+           International Airline Ticket Bookings
+           </h2>
+           <p>One-way International flight from India to the USA or Canada can cost you around INR 56999 to INR 79,999. However, the air ticket prices also depend on the airlines, travelling class and route connectivity.</p>
+           <a>
+            <img src="https://www.travanya.com/wp-content/themes/trv/images/first.webp"/>
+          </a>
+       </div>
+    </div>
+    <div className="flight-dv ">
+       <div className="container">
+           <h2 className="tittle_common">
+           Tips To Book Cheap Flight Tickets
+           </h2>
+          <ul className="flight-tick">
+            <li>
+               <i className="fa fa-check-circle"></i>To enjoy low fares on air ticket booking, it is cheaper to fly during weekdays like from Monday midnight to Thursday midnight.
+            </li>
+            <li>
+               <i className="fa fa-check-circle"></i>Choose local airlines as they are relatively cheaper. You might have to compromise on other aspects such as luggage capacity if that’s not an issue for you. 
+            </li>
+            <li>
+               <i className="fa fa-check-circle"></i>Be flexible with payment methods because paying for air tickets via a specific e-wallet or credit card can help you save a few bucks. 
+            </li>
+            <li>
+               <i className="fa fa-check-circle"></i>The right time for booking flight tickets is during the off-season. Just a little research on your destination’s off-season can help you get cheaper flights. 
+            </li>
+            <li>
+               <i className="fa fa-check-circle"></i>Pick alternative routes for both domestic and international flight (if there is no medical emergency) over direct flights to save more money.
+            </li>
+
+          </ul>
+          <div className="best_airlines">
+              <div className="row">
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/AirAsia.webp"></img>
+                        <p>AirAsia</p>
+                      </div>
+                  </div>
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/AirCanada.webp"></img>
+                        <p>AirCanada</p>
+                      </div>
+                  </div>
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/AirIndia.webp"></img>
+                        <p>AirIndia</p>
+                      </div>
+                  </div>
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/American.webp"></img>
+                        <p>American</p>
+                      </div>
+                  </div>
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/Etihad.webp"></img>
+                        <p>Etihad</p>
+                      </div>
+                  </div>
+                  <div className="col-sm-2">
+                      <div className="airline-inner">
+                        <img src="https://res.cloudinary.com/superfare/image/upload/Travanya/ChinaEastern.webp"></img>
+                        <p>ChinaEastern</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+       </div>
+    </div>
+    <div className="flight-dv martb15">
+       <div className="container">
+           <h2 className="tittle_common">
+           Deals & Offers On Online Flight Ticket Bookings
+           </h2>
+           <p>The online flight booking process allows you to compare the prices of several airlines and reserve the one that suits you best. Whether you want to make your long haul flight comfortable or just want to reach the destination, you can choose from an array of ticket booking offers and discounts. </p>
+           <p>Travanya’s latest travel deals can help you plan your trip at the lowest airfare. From <a> business class deals</a> to group deals and festive deals to <a>last minute deals</a>, our website has offers that are ideal for every traveller. Our strong association with airline consolidators helps in getting you surprising discounts on airfares for both economy and business class.</p>
        </div>
     </div>
     <div className="container">
@@ -490,81 +668,43 @@ function App() {
          </div>
        </div>
     </div>
-    <div className="bg_gray">
+    <div className="flight-dv mb15">
        <div className="container">
-           <h3>Latest updates on COVID-19 safety regulations & guidelines</h3>
-           <p>Learn about the precautionary measures to be taken by travellers to ensure a safe vacation</p>
-           <a href="" className="btn-blue">Read More</a>
+           <h2 className="tittle_common">
+           Why Book Flight Tickets With Travanya?
+           </h2>
+           <p>Travelling is a life-changing experience that can help you connect with people across borders, cultures, religions and understanding. Travanya will help you in organising budget-friendly travel with cheaper flight tickets and other amenities. We aspire to refrain from hidden charges and other convenience fees, which results in providing cost-efficient airfares to our customers.</p>
+           <a>
+            <img src="https://www.travanya.com/wp-content/themes/trv/images/second.webp"/>
+          </a>
+          <p className="mt15">Whether you want to board a Delhi flight at the last minute or have planned a luxury getaway with your spouse, travel deals at Travanya will get you amazing discounts and deals to make your journey more convenient. Just a single call to our travel agents can save you up to 35% on your ticket prices. </p>
        </div>
     </div>
-    <div className="popular_place jio_deal">
-       <div className="container">
-           <h2 className="tittle_common">Amazing International + Domestic Packages</h2>
-           <div className="popular-tabs">
-                 <ul>
-                   <li className="active"><a>International</a></li>
-                   
-                   <li><a>Domestic</a></li>
-                 </ul>
-                 <div className="tab-content">
-                     <div className="row">
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool1.jpg"/>
-                               </div>
-                               <h4>Maldives</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool2.jpg"/>
-                               </div>
-                               <h4>Dubai</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool3.jpg"/>
-                               </div>
-                               <h4>Thailand</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool4.jpg"/>
-                               </div>
-                               <h4>Singapore</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                   </div>
-                 </div>
-           </div>
-       </div>
+    <div className="question-dv">
+        <div className="container">
+        <h2 className="tittle_common">
+          Frequently Asked Questions
+           </h2>
+        <h3>Q: Which day of the week is the best day to buy airline tickets?</h3>
+        <p><b>Answer:</b>Monday midnight to Thursday midnight is the best time to book flight tickets. There are high chances to get low airfares during this time.</p>
+        <h3>Q: How far ahead should I buy airline tickets?</h3>
+        <p><b>Answer:</b>Booking your flight 50 days in advance from your date of departure can save you a lot.</p>
+        <h3>Q: Which are the cheapest days to fly?</h3>
+        <p><b>Answer:</b>Tuesday and Wednesday are the two cheapest days to fly.</p>
+        <h3>Q: Which is the cheapest month to fly?</h3>
+        <p><b>Answer:</b> January and September are considered to be the cheapest months to fly.</p>
+        <h3>Q: How can I find the cheapest flights on Travanya?</h3>
+        <p><b>Answer:</b>To grab the cheapest airfares, connect with our customer support agents and brief your requirements, and we will come up with the most economical flight options for you to choose from.</p>
+        <h3>Q: How can I save money on flights?</h3>
+        <p><b>Answer:</b>To save money on airfares, get your flight booked at least 50 days before the departure. You may also avail of flat discounts by using exclusive travel deals by Travanya.</p>
+        <h3>Q: How to check my flight status?</h3>
+        <p><b>Answer:</b>To check your flight status, log in to Travanya’s website and click on “My Booking”. Enter your departure and arrival date along with the time and booking reference number.</p>
+        <h3>Q: How can I get a cheap last-minute flight?</h3>
+        <p><b>Answer:</b> Last-minute flights are usually expensive. However, try being flexible with your travel date and time to grab cheaper options. You may also contact our support team to grab last-minute deals and offers.</p>
+
+        </div>
     </div>
+  
     
     <div className="newsletter">
      <div className="container">

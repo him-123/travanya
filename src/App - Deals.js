@@ -3,16 +3,18 @@ import transfer from './transfer.png';
 import pic1 from './assets/images/pic1.jpg';
 import './App.css';
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink,ButtonGroup,Button } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink,ButtonGroup,Button,CardTitle, CardText, Row, Col,Card } from 'reactstrap';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
 
 function App() {
-  const [activeTab, setActiveTab] = useState('1');
-  const toggle = tab => {
-    if(activeTab !== tab) setActiveTab(tab);
-  }
+
+    const [activeTab, setActiveTab] = useState('1');
+  
+    const toggle = tab => {
+      if(activeTab !== tab) setActiveTab(tab);
+    }
 
   
   return (
@@ -459,11 +461,171 @@ function App() {
     <div className="flight-dv">
        <div className="container">
            <h2 className="tittle_common">
-           Easy Flight Options, Easier Flight Bookings
+           Enjoy Cheap Flight Ticket Bookings Online
            </h2>
-           <p>Have you ever wondered what the key aspect of planning a trip is? Flight booking it is! Whether you plan to travel domestically or internationally, for business or leisure, you’ll need a platform to help you with affordable flight tickets. If you’ve been looking for one such platform, your search ends here! Travanya is the best travel agency in India that specializes in offering personalized holiday planning and booking of cheap flight tickets. </p>
-           <p>With us, you can be assured of getting flight tickets at the lowest prices. Be it a place in Bhutan, USA, or India, our travel experts will make sure you have the best flight itinerary. Get in touch with us via call or live chat and we’ll be glad to offer a helping hand. </p>
-       </div>
+          <p>Travelling is an unparalleled experience that gives you lifelong memories and amazing stories to tell and Travanya works 24×7 to make sure you have the best one. We will get you the most competitive flight offers for you to explore different cultures, destinations and encounter incredible people. </p> 
+         <p>Whether you want a relaxing break under the tropical beauty or looking to explore cities with a lot of history and architecture, we will arrange the cheapest yet comfortable flight deals as per your needs. Travel planning experts at Travanya ensure flexibility and will customize your deals just the way you want. Now explore breathtaking natural wonders and sensory discoveries without any worries because our flight booking offers are there to the rescue. </p>
+          </div>
+    </div>
+    <div className="flight-dv deal-dv mb15">
+       <div className="container">
+           <h2 className="tittle_common">
+           Deals Designed for You
+           </h2>
+        <div className="row">
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/student-flights.jpg"/>
+              <b>Student Flights</b>
+             </div>
+          </div>
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/non-stop-flights.jpg"/>
+              <b>Non Stop Flights</b>
+             </div>
+          </div>
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/round-trip-flights.jpg"/>
+              <b>Round Trip Flights</b>
+             </div>
+          </div>
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/direct-flights.jpg"/>
+              <b>Direct Flights</b>
+             </div>
+          </div>
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/last-minute-flights.jpg"/>
+              <b>Last Minute Flights</b>
+             </div>
+          </div>
+          <div className="col-sm-2">
+             <div className="thumb">
+               <img src="https://res.cloudinary.com/travanya/image/upload/v1624865118/flight/deals/one-way-flights.jpg"/>
+              <b>One Way Flights</b>
+             </div>
+          </div>
+        </div>
+           </div>
+    </div>
+    
+    <div className="flight-dv">
+       <div className="container">
+           <h2 className="tittle_common">
+           What Type of Travel Deals Can I Get?
+           </h2>
+         <p>If you have been waiting to book your flights to your dream destination, we have a super-useful collection of cheap travel deals that can make your experience memorable for life. </p>
+        <div className="deal-tabs">
+        <Nav tabs>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '1' })}
+            onClick={() => { toggle('1'); }}
+          >
+            Call-Only Deals
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '2' })}
+            onClick={() => { toggle('2'); }}
+          >
+            Festive Deals
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
+          >
+            Business Class Deals
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '4' })}
+            onClick={() => { toggle('4'); }}
+          >
+            Last-Minute Deals
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '5' })}
+            onClick={() => { toggle('5'); }}
+          >
+            Group Deals
+          </NavLink>
+        </NavItem>
+
+      </Nav>
+      <TabContent activeTab={activeTab}>
+        <TabPane tabId="1">
+          <Row>
+            <Col sm="12">
+              <div className="deal-content">
+                 <p>Are bucket-list moments calling you? Gone are days when travel was super expensive. Now you can avail up to 40% off with our call-only deals. Your single call to our travel experts can lock in prices before they go up and can save you a lot of bucks. Call-only deals are only effective for offline bookings.</p> 
+              </div>
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="2">
+          <Row>
+            <Col sm="12">
+              <div className="deal-content">
+                  <p>Planning a surprise visit to your special one’s place on Christmas? Our exclusive festive deals can get you budget-friendly flights and packages even during the peak season. Whether you want to spend just a weekend with your loved ones or the whole week, our festive deals ensure the cheapest airline deals and packages.</p>
+              </div>
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="3">
+          <Row>
+            <Col sm="12">
+              <div className="deal-content">
+                <p>Want to fly in style and comfort but at economical prices? Check out amazing flight offers today at Travanya and pack your bags for special private excursions. Business-class tickets with exceptional food and drinks, impressive hospitality and multiple entertainment options can make the long-haul flight experience splendid.</p>
+              </div>
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="4">
+          <Row>
+            <Col sm="12">
+              <div className="deal-content">
+                <p>Looking for a last-minute getaway? Snag your seat at a significant discount with our last-minute deals. We have a span of travel deals and discounts to embrace your experience. If in hurry, check out our last-minute flight ticket offers, book and pay directly on our website.</p>
+                 </div>
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="5">
+          <Row>
+            <Col sm="12">
+              <div className="deal-content">
+               <p>Did you wake up this morning feeling like you should be on some island with your friends? Well, you should be on an island. Our group deals can make your big dream vacation true because we believe travel is the most fun with family and friends. Hop on the site to check cost-efficient airfare deals, special amenities and more.</p>
+               </div>
+            </Col>
+          </Row>
+        </TabPane>
+      </TabContent>
+        </div>
+         
+          </div>
+     
+    </div>
+    
+    <div className="flight-dv martb15">
+       <div className="container">
+           <h2 className="tittle_common">
+           Why Choose Travanya For Travel Deals?
+           </h2>
+           <p>Do you want to chase freedom and jump back into flights? Our expertise in featuring the most economical flight tickets, affordable <b>holiday packages</b>, luxury travel deals and adventure group discounts will gear you up for a memorable getaway. </p>
+           <p>Whether you want to explore something new or revisit your favourite destination, We understand your travel needs and have a solution for all your travel doubts. Now delve deep into the spiritual dimensions of travel as special discounts and <a>deals at Travanya</a> will keep your spark of adventure alive. We bring you the best flight deals by catering to your travel needs with our motto, “If you want it, we’ll get it for you.”
+
+</p>
+           </div>
     </div>
     <div className="container">
        <div className="choose-dv ">
@@ -471,107 +633,58 @@ function App() {
              <h2 className="tittle_common">Why Choose Travanya?</h2>
              <div className="row">
              <div className="col-sm-3">
-               <img src="../assets/images/why1.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why1.png"/>
                <h4>Certified Company</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why2.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why2.png"/>
                <h4>Secure Payment Methods</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why3.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why3.png"/>
                <h4>Quick Response To Queries</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why4.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why4.png"/>
                <h4>No Hidden Charges</h4>
              </div>
              </div>
          </div>
        </div>
     </div>
-    <div className="bg_gray">
-       <div className="container">
-           <h3>Latest updates on COVID-19 safety regulations & guidelines</h3>
-           <p>Learn about the precautionary measures to be taken by travellers to ensure a safe vacation</p>
-           <a href="" className="btn-blue">Read More</a>
-       </div>
+    
+    <div className="question-dv">
+        <div className="container">
+        <h2 className="tittle_common">
+          Frequently Asked Questions
+           </h2>
+        <h3>Q: Which day of the week is the best day to buy airline tickets?</h3>
+        <p><b>Answer:</b>Monday midnight to Thursday midnight is the best time to book flight tickets. There are high chances to get low airfares during this time.</p>
+        <h3>Q: How far ahead should I buy airline tickets?</h3>
+        <p><b>Answer:</b>Booking your flight 50 days in advance from your date of departure can save you a lot.</p>
+        <h3>Q: Which are the cheapest days to fly?</h3>
+        <p><b>Answer:</b>Tuesday and Wednesday are the two cheapest days to fly.</p>
+        <h3>Q: Which is the cheapest month to fly?</h3>
+        <p><b>Answer:</b> January and September are considered to be the cheapest months to fly.</p>
+        <h3>Q: How can I find the cheapest flights on Travanya?</h3>
+        <p><b>Answer:</b>To grab the cheapest airfares, connect with our customer support agents and brief your requirements, and we will come up with the most economical flight options for you to choose from.</p>
+        <h3>Q: How can I save money on flights?</h3>
+        <p><b>Answer:</b>To save money on airfares, get your flight booked at least 50 days before the departure. You may also avail of flat discounts by using exclusive travel deals by Travanya.</p>
+        <h3>Q: How to check my flight status?</h3>
+        <p><b>Answer:</b>To check your flight status, log in to Travanya’s website and click on “My Booking”. Enter your departure and arrival date along with the time and booking reference number.</p>
+        <h3>Q: How can I get a cheap last-minute flight?</h3>
+        <p><b>Answer:</b> Last-minute flights are usually expensive. However, try being flexible with your travel date and time to grab cheaper options. You may also contact our support team to grab last-minute deals and offers.</p>
+
+        </div>
     </div>
-    <div className="popular_place jio_deal">
-       <div className="container">
-           <h2 className="tittle_common">Amazing International + Domestic Packages</h2>
-           <div className="popular-tabs">
-                 <ul>
-                   <li className="active"><a>International</a></li>
-                   
-                   <li><a>Domestic</a></li>
-                 </ul>
-                 <div className="tab-content">
-                     <div className="row">
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool1.jpg"/>
-                               </div>
-                               <h4>Maldives</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool2.jpg"/>
-                               </div>
-                               <h4>Dubai</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool3.jpg"/>
-                               </div>
-                               <h4>Thailand</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                     <div className="col-sm-3">
-                        <div className="item">
-                             <a href="#">
-                               <div className="image-block">
-                                 <img src="../assets/images/cool4.jpg"/>
-                               </div>
-                               <h4>Singapore</h4>
-                               <span>
-                                 <i className="fa fa-inr"></i>55,250 <i className="fa fa-arrow-right"></i>
-                               </span>
-                             </a>
-                        </div>
-                     </div>
-                   </div>
-                 </div>
-           </div>
-       </div>
-    </div>
+  
     
     <div className="newsletter">
      <div className="container">
          <div className="main_div parent">
              <div className="row">
                <div className="col-sm-6">
-                   <img src="../assets/images/subscribe.svg"/>
+                   <img src="https://www.travanya.com/wp-content/themes/trv/images/subscribe.svg"/>
                    <h2>Get Updates & More</h2>
                    <h5>Thoughtful thoughts to your inbox</h5>
                </div>
