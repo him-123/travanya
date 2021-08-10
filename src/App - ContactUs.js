@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
 
-function App() {
+function AppContactUs() {
 
     const [activeTab, setActiveTab] = useState('1');
   
@@ -37,18 +37,18 @@ function App() {
     </header>
     
     <div className="navbar">
-         <ul>
+          <ul>
            <li>
-           <a><i className="fa fa-plane"></i>Flights</a>
+           <Link to="/flight"><i className="fa fa-plane"></i>Flights</Link>
            </li>
            <li>
-           <a><i className="fa fa-gift"></i>Deals</a>
+           <Link to="/deals"><i className="fa fa-gift"></i>Deals</Link>
            </li>
            <li>
-           <a><i className="fa fa-search"></i>Flight Tracker</a>
+           <Link to="/tracker"><i className="fa fa-search"></i>Flight Tracker</Link>
            </li>
            <li>
-           <a><i className="fa fa-phone"></i>Contact Us</a>
+           <Link to="/contact-us"><i className="fa fa-phone"></i>Contact Us</Link>
            </li>
          </ul>
     </div>
@@ -256,4 +256,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppContactUs;

@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
 
-function App() {
+function AppDeals() {
 
     const [activeTab, setActiveTab] = useState('1');
   
@@ -37,18 +37,18 @@ function App() {
     </header>
     
     <div className="navbar">
-         <ul>
+          <ul>
            <li>
-           <a><i className="fa fa-plane"></i>Flights</a>
+           <Link to="/flight"><i className="fa fa-plane"></i>Flights</Link>
            </li>
            <li>
-           <a><i className="fa fa-gift"></i>Deals</a>
+           <Link to="/deals"><i className="fa fa-gift"></i>Deals</Link>
            </li>
            <li>
-           <a><i className="fa fa-search"></i>Flight Tracker</a>
+           <Link to="/tracker"><i className="fa fa-search"></i>Flight Tracker</Link>
            </li>
            <li>
-           <a><i className="fa fa-phone"></i>Contact Us</a>
+           <Link to="/contact-us"><i className="fa fa-phone"></i>Contact Us</Link>
            </li>
          </ul>
     </div>
@@ -235,7 +235,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ord.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -265,7 +265,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/lga.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -295,7 +295,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -331,7 +331,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/yyz.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -361,7 +361,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ewr.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -391,7 +391,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ixc.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -421,7 +421,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/maa.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -759,4 +759,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppDeals;

@@ -6,13 +6,28 @@ import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink,ButtonGroup,Button } from 'reactstrap';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-
+import { LocalForm, Control } from 'react-redux-form';
+import { isEmail, isEmpty } from 'validator';
 
 function App() {
   const [activeTab, setActiveTab] = useState('1');
+  const [isvalidate, setValidate] = useState(false);
   const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
   }
+
+  const submit = () => {
+    console.log('gjgjgh');
+    setValidate(false);
+  } 
+
+  const handleSubmitFailed = () => {
+    console.log('sfsdfd');
+    setValidate(true);
+    document.getElementById("myCheck").click();
+  }
+
+
 
   
   return (
@@ -35,34 +50,39 @@ function App() {
     </header>
     
     <div className="navbar">
+
          <ul>
            <li>
-           <a><i className="fa fa-plane"></i>Flights</a>
+           <Link to="/flight"><i className="fa fa-plane"></i>Flights</Link>
            </li>
            <li>
-           <a><i className="fa fa-gift"></i>Deals</a>
+           <Link to="/deals"><i className="fa fa-gift"></i>Deals</Link>
            </li>
            <li>
-           <a><i className="fa fa-search"></i>Flight Tracker</a>
+           <Link to="/tracker"><i className="fa fa-search"></i>Flight Tracker</Link>
            </li>
            <li>
-           <a><i className="fa fa-phone"></i>Contact Us</a>
+           <Link to="/contact-us"><i className="fa fa-phone"></i>Contact Us</Link>
            </li>
          </ul>
     </div>
     <div className="banner home">
     <div className="container">
     <h2>The World is Waiting for You to Explore It!</h2>
-    <div className="main-form">
+    <div  className="main-form">
+    <LocalForm
+     model="user"
+     
+    >
       <ul>
         <li><a className="active"><i className="fa fa-plane mar_r5"></i>Flights</a></li>
         <li><a><i className="fa fa-umbrella mar_r5"></i>Package</a></li>
       </ul>
       <div className="switch-field">
-      <ButtonGroup> 
-        <Button className="active">Round Trip</Button>
-        <Button>One Way</Button>
-      </ButtonGroup>
+          <ButtonGroup> 
+            <Button className="active">Round Trip</Button>
+            <Button>One Way</Button>
+          </ButtonGroup>
       </div>
       <div className="main_form">
         <div className="row ">
@@ -72,7 +92,7 @@ function App() {
               <div className="col-sm-6 ex-3">
                   <div className="form-group ff_input">
                   <label> <i className="fa fa-map-marker"/> Going From?</label>
-                  <input className="form-control" type="text" placeholder="Delhi"/><p><span>DEL, Delhi Airport India</span></p>
+                  <input onClick={() =>submit() } onChange={()=>submit()}  required   className="form-control" type="text" placeholder="Delhi"/>
                   </div>	
               </div> 
                   
@@ -80,7 +100,7 @@ function App() {
                   <a href=""><img className="transfer hidden-xs" src={transfer} alt="img"/></a>
                   <div className="form-group gap_extra border-gap">
                   <label><i className="fa fa-map-marker"/>To Where?</label>
-                  <input className="form-control" type="text" placeholder="Banglore"/><p><span>BLR, Kempegowda International Air..</span></p>
+                  <input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="Banglore"/>
                   </div>	  
               </div>
               </div>
@@ -90,16 +110,16 @@ function App() {
         <div id="add_class" className="col-sm-3 col-xs-6 ex-3">
           <div className="form-group calender border-left1">
           <label><i className="fa fa-calendar"></i> Departure </label>
-          <input className="form-control" type="text" placeholder="21 May"/>
+          <input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="21 May"/>
     
-          <p><span>Friday</span></p>
+         
           </div>
           </div>
         <div className="col-sm-3 col-xs-6 ex-3">
           <div id="return_optn" className="myText">		
           <div className="form-group calender">
           <label><i className="fa fa-retweet"></i>Return </label>
-          <input className="form-control" type="text" placeholder="05 June"/><p><span>Saturday</span></p>
+          <input onClick={() =>submit() } onChange={() => submit()} required className="form-control" type="text" placeholder="05 June"/>
           </div>
           </div>
          </div> 
@@ -107,7 +127,7 @@ function App() {
           <div className="col-sm-6 col-xs-12 ex-3 traveller_input">
           <div className="form-group">
           <label><i className="fa fa-users"></i>Traveller &amp; Class</label>
-          <input className="form-control" placeholder="1 Traveller"/>
+          <input onClick={() =>submit() } onChange={()=>submit()}  required className="form-control" placeholder="1 Traveller"/>
               <p><span>Economy/Premium Economy</span></p>
           </div>
           </div>
@@ -117,8 +137,16 @@ function App() {
         </div>
     
       </div>
-      <div className="btn_search text-center"><button className="btn btn-orange" type="submit"> <i className="fa fa-search"></i> Search</button></div>
-    
+      <div className="btn_search text-center">
+        {!isvalidate &&
+      <button   className="btn btn-orange" id="myCheck"  type="submit"> <i onClick={ () => handleSubmitFailed() } className="fa fa-search">Search</i> </button>
+
+    }
+    {isvalidate &&
+      <button  disabled="disabled" className="btn btn-orange" > <i className="fa fa-search"></i> Validating</button>
+    }
+      </div>
+    </LocalForm>
     </div>
     </div>
     </div>
@@ -233,7 +261,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ord.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -263,7 +291,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -293,7 +321,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -329,7 +357,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/bom.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -359,7 +387,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/bom.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -389,7 +417,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/del.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -419,7 +447,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="../assets/images/pic1.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ccu.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -471,19 +499,19 @@ function App() {
              <h2 className="tittle_common">Why Choose Travanya?</h2>
              <div className="row">
              <div className="col-sm-3">
-               <img src="../assets/images/why1.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why1.png"/>
                <h4>Certified Company</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why2.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why2.png"/>
                <h4>Secure Payment Methods</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why3.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why3.png"/>
                <h4>Quick Response To Queries</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why4.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why4.png"/>
                <h4>No Hidden Charges</h4>
              </div>
              </div>
@@ -512,7 +540,7 @@ function App() {
                         <div className="item">
                              <a href="#">
                                <div className="image-block">
-                                 <img src="../assets/images/cool1.jpg"/>
+                                 <img src="https://www.travanya.com/wp-content/themes/trv/images/tmp/cool1.jpg"/>
                                </div>
                                <h4>Maldives</h4>
                                <span>
@@ -525,7 +553,7 @@ function App() {
                         <div className="item">
                              <a href="#">
                                <div className="image-block">
-                                 <img src="../assets/images/cool2.jpg"/>
+                                 <img src="https://www.travanya.com/wp-content/themes/trv/images/tmp/cool2.jpg"/>
                                </div>
                                <h4>Dubai</h4>
                                <span>
@@ -538,7 +566,7 @@ function App() {
                         <div className="item">
                              <a href="#">
                                <div className="image-block">
-                                 <img src="../assets/images/cool3.jpg"/>
+                                 <img src="https://www.travanya.com/wp-content/themes/trv/images/tmp/cool3.jpg"/>
                                </div>
                                <h4>Thailand</h4>
                                <span>
@@ -551,7 +579,7 @@ function App() {
                         <div className="item">
                              <a href="#">
                                <div className="image-block">
-                                 <img src="../assets/images/cool4.jpg"/>
+                                 <img src="https://www.travanya.com/wp-content/themes/trv/images/tmp/cool4.jpg"/>
                                </div>
                                <h4>Singapore</h4>
                                <span>
@@ -571,7 +599,7 @@ function App() {
          <div className="main_div parent">
              <div className="row">
                <div className="col-sm-6">
-                   <img src="../assets/images/subscribe.svg"/>
+                   <img src="https://www.travanya.com/wp-content/themes/trv/images/subscribe.svg"/>
                    <h2>Get Updates & More</h2>
                    <h5>Thoughtful thoughts to your inbox</h5>
                </div>

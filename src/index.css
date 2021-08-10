@@ -107,6 +107,7 @@ header.header1 {
   padding: 10px 5px;
   border-right: none;
   cursor: pointer;
+  min-height: 120px;
 }
 .main_form .form-group label {
   font-weight: 500;
