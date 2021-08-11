@@ -19,7 +19,7 @@ function AppFlight() {
     <div className="App">
     <header className="header1">
      <div className="logo1">
-       <img src={logo}/>
+     <Link to="/travanya"> <img src={logo}/></Link>
      </div>
      <div className="right-section d-flex">
         <a>
@@ -117,7 +117,7 @@ function AppFlight() {
         </div>
     
       </div>
-      <div className="btn_search text-center"><button className="btn btn-orange" type="submit"> <i className="fa fa-search"></i> Search</button></div>
+      <div className="btn_search text-center"><button className="btn btn-orange" type="submit"> <i className="fa fa-search"></i> Submit</button></div>
     
     </div>
     </div>
@@ -233,7 +233,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ord.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/jfk.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -263,7 +263,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/del.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ewr.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -293,7 +293,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ccu.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ord.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -329,7 +329,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ixc.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/yyz.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -359,7 +359,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/maa.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/yyc.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -389,7 +389,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/del.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/maa.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -419,7 +419,7 @@ function AppFlight() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/maa.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ccu.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -649,19 +649,19 @@ function AppFlight() {
              <h2 className="tittle_common">Why Choose Travanya?</h2>
              <div className="row">
              <div className="col-sm-3">
-               <img src="../assets/images/why1.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why1.png"/>
                <h4>Certified Company</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why2.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why2.png"/>
                <h4>Secure Payment Methods</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why3.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why3.png"/>
                <h4>Quick Response To Queries</h4>
              </div>
              <div className="col-sm-3">
-               <img src="../assets/images/why4.png"/>
+               <img src="https://www.travanya.com/wp-content/themes/trv/images/why4.png"/>
                <h4>No Hidden Charges</h4>
              </div>
              </div>
@@ -711,7 +711,7 @@ function AppFlight() {
          <div className="main_div parent">
              <div className="row">
                <div className="col-sm-6">
-                   <img src="https://www.travanya.com/wp-content/themes/trv/images/subscribe.svg"/>
+                   <img src="../assets/images/subscribe.svg"/>
                    <h2>Get Updates & More</h2>
                    <h5>Thoughtful thoughts to your inbox</h5>
                </div>

@@ -20,7 +20,7 @@ function AppTracker() {
     <div className="App">
     <header className="header1">
      <div className="logo1">
-       <img src={logo}/>
+     <Link to="/travanya"> <img src={logo}/></Link>
      </div>
      <div className="right-section d-flex">
         <a>

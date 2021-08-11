@@ -869,3 +869,38 @@ header.header1 .right-section .pull-right h3 {
 ul.arrival-dv.status-dv li {
   margin-bottom: 10px;
 }
+.new-down-form label {
+  margin-right: 5px;
+}
+.new-down-form input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.new-down-form label span{
+  color: red;
+  margin-left: 3px;
+}
+.down-from {
+  display: flex;
+}
+.group-input input {
+  margin-top: 15px;
+  width: 93%;
+  border: none;
+}
+.form-select1 {
+  display: flex;
+  flex-direction: column;
+}
+.form-select1 .css-2b097c-container .css-yk16xz-control,.form-select1 .css-2b097c-container .css-1pahdxg-control,.form-select1 .css-2b097c-container .css-1pahdxg-control:focus{
+border: none;margin-top:15px;width: 93%;
+}
+.css-tlfecz-indicatorContainer,.css-1hb7zxy-IndicatorsContainer{
+  display: none !important;
+}
+.logo1 img,.tab-content .nav-tabs a.nav-link {
+  cursor: pointer;
+}
+.group-input .form-select1 input{
+  margin-top: 0px;
+}

@@ -8,13 +8,22 @@ import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { LocalForm, Control } from 'react-redux-form';
 import { isEmail, isEmpty } from 'validator';
+import DatePicker from "react-datepicker";
+import Select from 'react-select';
+
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
   const [activeTab, setActiveTab] = useState('1');
   const [isvalidate, setValidate] = useState(false);
+  const [oneway, setOneWay] = useState(true);
+  const [isPackage, setpackage] = useState(false);
   const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
   }
+  const [startDate, setStartDate] = useState(new Date());
+    const [startDate1, setStartDate1] = useState(new Date());
 
   const submit = () => {
     console.log('gjgjgh');
@@ -26,7 +35,12 @@ function App() {
     setValidate(true);
     document.getElementById("myCheck").click();
   }
-
+  const [selectedOption, setSelectedOption] = useState(null);
+  const options = [
+    { value: 'Aalborg', label: 'Aalborg' },
+    { value: 'Aarhus', label: 'Aarhus' },
+    { value: 'aberdeen', label: 'aberdeen' },
+  ];
 
 
   
@@ -34,7 +48,7 @@ function App() {
     <div className="App">
     <header className="header1">
      <div className="logo1">
-       <img src={logo}/>
+     <Link to="/travanya"><img src={logo}/></Link>
      </div>
      <div className="right-section d-flex">
         <a>
@@ -75,13 +89,15 @@ function App() {
      
     >
       <ul>
-        <li><a className="active"><i className="fa fa-plane mar_r5"></i>Flights</a></li>
-        <li><a><i className="fa fa-umbrella mar_r5"></i>Package</a></li>
+        <li><a onClick={() => setpackage(false)} className={isPackage ? '' : 'active'}><i className="fa fa-plane mar_r5"></i>Flights</a></li>
+        <li><a onClick={() => setpackage(true)} className={isPackage ? 'active' : ''}><i className="fa fa-umbrella mar_r5"></i>Package</a></li>
       </ul>
+      {!isPackage &&
+        <>
       <div className="switch-field">
           <ButtonGroup> 
-            <Button className="active">Round Trip</Button>
-            <Button>One Way</Button>
+            <Button onClick={() => setOneWay(true)} className={oneway ? 'active' :''}>Round Trip</Button>
+            <Button onClick={() => setOneWay(false)} className={oneway ? '' :'active'}>One Way</Button>
           </ButtonGroup>
       </div>
       <div className="main_form">
@@ -89,10 +105,21 @@ function App() {
           
           <div className="col-lg-6 col-md-12">
               <div className="row">
-              <div className="col-sm-6 ex-3">
-                  <div className="form-group ff_input">
+              <div className="col-sm-6 ex-3 group-input">
+                  <div className="form-group ff_input form-select1">
                   <label> <i className="fa fa-map-marker"/> Going From?</label>
-                  <input onClick={() =>submit() } onChange={()=>submit()}  required   className="form-control" type="text" placeholder="Delhi"/>
+                  {/* <input onClick={() =>submit() } onChange={()=>submit()}  required   className="form-control" type="text" placeholder="Delhi"/> */}
+                  {/* <input list="browsers" name="myBrowser" placeholder="Type Here" required/>
+                    <datalist id="browsers">
+                      <option>dwq</option>
+                      <option>dwq</option>
+                    </datalist> */}
+                    <Select
+                      defaultValue={selectedOption}
+                      onChange={setSelectedOption}
+                      options={options}
+                      required
+                    />
                   </div>	
               </div> 
                   
@@ -105,41 +132,164 @@ function App() {
               </div>
               </div>
           </div>
-          <div className="col-lg-6 col-md-12">
+           <div className="col-lg-6 col-md-12">
         <div className="row">
+          {oneway &&
+         
         <div id="add_class" className="col-sm-3 col-xs-6 ex-3">
           <div className="form-group calender border-left1">
           <label><i className="fa fa-calendar"></i> Departure </label>
-          <input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="21 May"/>
+           <DatePicker className="form-control" onClick={() =>submit() } onChange={() => submit()}  selected={startDate} onChange={(date) => setStartDate(date)} placeholder="21 May" />
+          {/*<input  required className="form-control" type="text" placeholder="21 May"/>*/}
+             
     
          
           </div>
+          </div>}
+          {!oneway && 
+         
+            
+        <div id="add_class" className="col-sm-6 col-xs-6 ex-3">
+          <div className="form-group calender border-left1">
+          <label><i className="fa fa-calendar"></i> Departure </label>
+           <DatePicker className="form-control" onClick={() =>submit() } onChange={() => submit()}  selected={startDate} onChange={(date) => setStartDate(date)} placeholder="21 May" />
+          {/*<input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="21 May"/>*/}
+    
+         
           </div>
+          </div>}
+          {oneway &&
         <div className="col-sm-3 col-xs-6 ex-3">
           <div id="return_optn" className="myText">		
           <div className="form-group calender">
           <label><i className="fa fa-retweet"></i>Return </label>
-          <input onClick={() =>submit() } onChange={() => submit()} required className="form-control" type="text" placeholder="05 June"/>
+
+ <DatePicker className="form-control" onClick={() =>submit() } onChange={() => submit()}  selected={startDate1} onChange={(date) => setStartDate1(date)} placeholder="21 May" />
+          {/*<input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="21 May"/>*/}          </div>
           </div>
-          </div>
-         </div> 
-    
-          <div className="col-sm-6 col-xs-12 ex-3 traveller_input">
+         </div>
+       }
+       <div className="col-sm-6 col-xs-12 ex-3 traveller_input">
           <div className="form-group">
           <label><i className="fa fa-users"></i>Traveller &amp; Class</label>
-          <input onClick={() =>submit() } onChange={()=>submit()}  required className="form-control" placeholder="1 Traveller"/>
+          <select
+          className="form-control" placeholder="1 Traveller"
+                  onClick={() =>submit() } onChange={()=>submit()}
+                >
+                  <option value="">Traveller 1</option>
+                  <option value="male">Adults</option>
+                  <option value="female">Senior</option>
+
+                </select>
+          {/*<input onClick={() =>submit() } onChange={()=>submit()}  required className="form-control" placeholder="1 Traveller"/>*/}
               <p><span>Economy/Premium Economy</span></p>
           </div>
           </div>
+     </div>
+
+     </div>
+   </div>
+ </div>
+
+          
+
+         </>
+         }
+
+
+     {isPackage &&
+        <>
+     
+      <div className="switch-field">
+          <ButtonGroup> 
+            <Button onClick={() => setOneWay(true)} className={oneway ? 'active' : ''}> Leisure</Button>
+            <Button onClick={() => setOneWay(false)} className={oneway ? '' : 'active'}>Honeymoon</Button>
+          </ButtonGroup>
+      </div>
+      <div className="main_form">
+        <div className="row ">
+          
+          <div className="col-lg-6 col-md-12">
+              <div className="row">
+              <div className="col-sm-6 ex-3">
+                  <div className="form-group ff_input">
+                  <label> <i className="fa fa-map-marker"/> From Where?</label>
+                  <input onClick={() =>submit() } onChange={()=>submit()}  required   className="form-control" type="text" placeholder="Delhi"/>
+                  </div>  
+              </div> 
+                  
+              <div className="col-sm-6 ex-3">
+                  <a href=""><img className="transfer hidden-xs" src={transfer} alt="img"/></a>
+                  <div className="form-group gap_extra border-gap">
+                  <label><i className="fa fa-map-marker"/> To Where?</label>
+                  <input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="Banglore"/>
+                  </div>    
+              </div>
+              </div>
+          </div>
+           <div className="col-lg-6 col-md-12">
+        <div className="row">
+         
+         
+        <div id="add_class" className="col-sm-6 col-xs-6 ex-3">
+          <div className="form-group calender border-left1">
+          <label><i className="fa fa-calendar"></i> Travel Date  </label>
+           <DatePicker className="form-control" onClick={() =>submit() } onChange={() => submit()}  selected={startDate} onChange={(date) => setStartDate(date)} placeholder="21 May" />
+          {/*<input onClick={() =>submit() } onChange={() => submit()}  required className="form-control" type="text" placeholder="21 May"/>*/}
+    
+         
+          </div>
+          </div>
+          <div className="col-sm-6 col-xs-12 ex-3 traveller_input">
+          <div className="form-group">
+          <label><i className="fa fa-users"></i>Travellers</label>
+           <select
+           className="form-control" placeholder="1 Traveller"
+                  onClick={() =>submit() } onChange={()=>submit()}
+                >
+                  <option value="">Traveller 1</option>
+                  <option value="male">Adults</option>
+                  <option value="female">Senior</option>
+
+                </select>
+          {/*<input onClick={() =>submit() } onChange={()=>submit()}  required className="form-control" placeholder="1 Traveller"/>*/}
+             
+          </div>
+          </div>
         </div>
       </div>
     
         </div>
+        <div className="row new-down-form">
+            <div className="col-sm-3">
+                <div className="down-from">
+                <label>Name<span>*</span></label>
+                <input type="text" placeholder="Type here" required/>
+                </div>
+            </div>
+            <div className="col-sm-3">
+              <div className="down-from">
+                <label>Email<span>*</span></label>
+                <input type="text" placeholder="Type here" required/>
+              </div>
+            </div>
+            <div className="col-sm-3">
+              <div className="down-from">
+                <label>Phone<span>*</span></label>
+                <input type="text" placeholder="Type here" required/>
+              </div>
+            </div>
+        </div>
     
       </div>
+      
+
+    
+       
+      </>}
       <div className="btn_search text-center">
         {!isvalidate &&
-      <button   className="btn btn-orange" id="myCheck"  type="submit"> <i onClick={ () => handleSubmitFailed() } className="fa fa-search">Search</i> </button>
+      <button   className="btn btn-orange" id="myCheck"  type="submit"> <i onClick={ () => handleSubmitFailed() } className="fa fa-search">Submit</i> </button>
 
     }
     {isvalidate &&
@@ -261,7 +411,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ord.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ixc.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -291,7 +441,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ccu.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -321,7 +471,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/del.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -357,7 +507,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/bom.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/yyc.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -387,7 +537,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/bom.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/yyz.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -417,7 +567,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/del.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/sfo.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>
@@ -447,7 +597,7 @@ function App() {
                <div className="thumb">
                  <div className="row">
                      <div className="col-sm-3">
-                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/ccu.jpg"/></a>
+                       <a href="#"><img src="https://res.cloudinary.com/superfare/image/upload/Travanya/destinations/jfk.jpg"/></a>
                      </div>
                      <div className="col-sm-9 inner_thumb">
                        <ul>

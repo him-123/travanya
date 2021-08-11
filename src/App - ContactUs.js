@@ -21,7 +21,7 @@ function AppContactUs() {
     <div className="App">
     <header className="header1">
      <div className="logo1">
-       <img src={logo}/>
+     <Link to="/travanya"> <img src={logo}/></Link>
      </div>
      <div className="right-section d-flex">
         <a>
@@ -119,7 +119,7 @@ function AppContactUs() {
         </div>
     
       </div>
-      <div className="btn_search text-center"><button className="btn btn-orange" type="submit"> <i className="fa fa-search"></i> Search</button></div>
+      <div className="btn_search text-center"><button className="btn btn-orange" type="submit"> <i className="fa fa-search"></i> Submit</button></div>
     
     </div>
     </div>
